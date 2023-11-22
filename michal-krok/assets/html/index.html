@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michał Krok</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="page">
+    <nav>    
+        <div class="logo" onclick="window.location.reload()">MK</div>
+        <div id="navigation">
+            <ul class="nav-links">
+                <li class="nav-link"><a href="#page">HOME</a></li>
+                <li class="nav-link"><a href="#about-section">ABOUT</a></li>
+                <li class="nav-link"><a href="#skills-section">SKILLS</a></li>
+                <li class="nav-link"><a href="#projects-section">PROJECTS</a></li>
+                <li class="nav-link"><a href="#contact-section">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="home-section">
+        <div id="title"><h1>Hi, I'm <span id="my-name">Michał Krok</span>
+            <br> 
+            <span id="title-extension">beginner front end developer</span></h1>
+        </div>
+        <div id="contact-me">
+            <button id="contact-me-button" onclick="document.getElementById('contact-section').scrollIntoView();">Contact me</button>
+        </div>
+    </div>
+    <div id="about-section">
+        <div id="about-text">
+            <div id="about-title">ABOUT ME</div>
+            <div id="about-title-extension">
+            <span>Hello, I'm Michał Krok and I'm beginner front developer. <br> 
+                I am currently looking for my first job or internship. <br>
+                I would really like to develop my skills in creating websites <br>
+                and to take it from there even further in the future to learn different technologies. <br>
+                I also want to gain some experience and get know this industry better.</span>
+            </div>
+        </div>
+        <img id="about-img" src="/assets/img/about_me.svg">
+    </div>
+    <div id="skills-section">
+        <div id="skills-title">SKILLS</div>
+        <div id="skills-content">
+            HTML5 <br><br>
+            CSS3 <br><br>
+            JavaScript <br><br>
+            MySQL <br>
+        </div>
+        <br> <br> <br>
+        and still learning...
+    </div>
+    <div id="projects-section">
+        <div id="projects-title">MY PROJECTS</div>
+            <div id="projects-content">
+            <div class="project">HANGMAN GAME</div>
+            <div class="project">TODO APP</div>
+            <div class="project">MOVIE BROWSE PAGE</div>
+            <div class="project">...</div>
+        </div>
+     </div>
+    <div id="contact-section">
+        <div id="contact-title">GET IN TOUCH</div>
+        <div id="contact-content">
+            <div id="contact-information">
+                <div><i class="fa-solid fa-envelope" style="color: #ffffff;"></i></div><span class="c-span">E-mail address:</span><br>
+                krokmichaldm@gmail.com <br><br>
+                <div><i class="fa-solid fa-phone" style="color: #ffffff;"></i></div><span class="c-span">Phone number:</span> <br>
+                +48 530 525 501
+            </div>
+            <div id="contact-form">
+                <form action="https://formspree.io/f/mvojnkzq" method="POST">
+                <label><input type="text" name="name" id="name" class="field" placeholder="name" required></label>
+                <label><input type="email" name="email" id="email" class="field" placeholder="email" required></label>
+                <label><input type="text" name="phone" id="phone" class="field" placeholder="phone number" required></label>
+                <label><textarea name='message' id="message" class="field" cols="30" rows="10" placeholder="your message"></textarea></label>
+                <div id="buttons">
+                    <button type="submit" class="c-button" id="send-button">SEND</button>
+                </div>
+                </form>
+                <button onclick="clearForm()" class="c-button" id="clear-button">CLEAR</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <i class="fa-brands fa-linkedin-in" style="color: #ffffff;"></i>
+        <i class="fa-brands fa-github" style="color: #ffffff;"></i>
+    </footer>
+</div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script> 
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
