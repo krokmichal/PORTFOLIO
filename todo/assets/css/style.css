@@ -1,0 +1,132 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #7F7F7F;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#title {
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid rgb(41, 41, 138); */
+}
+
+#TODO {
+    background-color: rgb(23, 146, 146);
+    border-right: none;
+}
+
+#LIST {
+    background-color: white;
+    color: rgb(23, 146, 146);
+    border-left: none;
+}
+
+#todo-app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+#new-task {
+    color: rgb(23, 146, 146);
+    border: 1px solid rgb(23, 146, 146);
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+}
+
+#add {
+    background-color: rgb(23, 146, 146);
+    border: 1px solid white;
+    color: white;
+    margin-top: 1rem;
+    width: 100%;
+    text-decoration: solid;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.tclass {
+    color: white;
+}
+
+#comment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+ .deleteButton {
+    background-color: white;
+    border: solid 1px white;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+} 
+
+.deleteButton:hover {
+    background-color: #c7c6c6;
+    transition: 0.5s;
+}
+
+.importantButton {
+    background-color: white;
+    border: solid 1px white;
+    border-radius: 4px;
+    margin-left: 1px;
+    cursor: pointer;
+}
+
+.importantButton:hover {
+    background-color: #c7c6c6;
+    transition: 0.5s;
+}
+
+.important {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 350px) {
+    #title {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 200px) {
+
+    #title {
+        font-size: 10px;
+    }
+
+    #new-task {
+        font-size: 6px;
+    }
+
+    #list {
+        font-size: 8px;
+    }
+
+}
