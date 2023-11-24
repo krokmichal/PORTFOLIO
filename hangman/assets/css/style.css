@@ -1,5 +1,7 @@
     /*      GRA      */
 
+    /* @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@400;700&display=swap'); */
+
 body {
     background-color: black;
     color: white;
@@ -85,11 +87,13 @@ body {
 
 /*  STRONA GŁÓWNA  */
 
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 
 #title {
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #999;
+    font-size: 8rem;
+    font-family: 'Creepster', cursive;
 }
 
 #newGame {
