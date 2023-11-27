@@ -1,15 +1,20 @@
+let text = "";
 // zmienna od której zależeć będzie, czy można użyć operatora
 let operatorInserted = true;
 // zmienna od której zależeć będzie, czy można użyć przycisku "+/-" lub "%"
 let numberInserted = false;
 let minusCounter = 0;
 let dotCounter = 1;
+let onLeftSide = true;
+let textLeft,
+  textRight = "";
+let operatorPlace = 0;
+let numbersBlocked = false; // ta zmienna bedzie uzyta do zablokowania mozliwosci wpisywania liczb po kliknieciu '='
 
 // Funkcja wkładająca wartość klikniętego przycisku do kalkulatora
 function insert(x) {
-  let text = document.querySelector("#display").value;
-  
-  
+  text = document.querySelector("#display").value;
+
   // Sprawdzanie co już znajduje się na wyświetlaczu
   for (let i = 0; i < text.length; i++) {
     if (text.charAt(i) == "-") {
@@ -22,10 +27,23 @@ function insert(x) {
       text.charAt(i) == "+" ||
       text.charAt(i) == "*" ||
       text.charAt(i) == "/"
-    ) { 
+    ) {
       operatorInserted = true;
       minusCounter = 2;
     }
+
+    if (
+      text.charAt(i + 1) == "+" ||
+      text.charAt(i + 1) == "*" ||
+      text.charAt(i + 1) == "/" ||
+      text.charAt(i + 1) == "-"
+    ) {
+      onLeftSide = false;
+      operatorPlace = i + 1;
+    }
+
+    if (onLeftSide == true) textLeft = text.slice(0);
+    else textRight = text.slice(operatorPlace + 1);
   }
 
   // Wczytywany jest operator
@@ -36,6 +54,7 @@ function insert(x) {
       document.querySelector("#display").value += x;
       operatorInserted = true;
       dotCounter = 1;
+      numbersBlocked = false;
     }
     // Wczytywany jest minus
   } else if (x == "-") {
@@ -43,6 +62,7 @@ function insert(x) {
     if (minusCounter < 2) {
       document.querySelector("#display").value += x;
       minusCounter++;
+      numbersBlocked = false;
     }
     // Wczytywana jest kropka
   } else if (x == ".") {
@@ -54,22 +74,24 @@ function insert(x) {
 
   // Wczytywana jest liczba
   else {
+    if (numbersBlocked == false) {
     document.querySelector("#display").value += x;
     operatorInserted = false;
     numberInserted = true;
     if (
-    text.includes(".") == true &&
-    !(text.includes("+") ||
-    text.includes("-") ||
-    text.includes("*") ||
-    text.includes("/"))
-    ) 
-    dotCounter = 1;
+      (onLeftSide == true && textLeft.includes(".") == true) ||
+      (onLeftSide == false && textRight.includes(".") == true)
+    )
+      dotCounter = 1;
     else dotCounter = 0;
 
     if (text.charAt(0) !== "-") minusCounter = 1;
     else minusCounter = 0;
   }
+  }
+  text = document.querySelector("#display").value;
+  console.log(textLeft);
+  console.log(textRight);
 }
 
 // Słuchacz zdarzeń dla przycisku "clear"
@@ -78,10 +100,15 @@ document.querySelector("#clear").addEventListener("click", clear);
 // Funkcja do wyczyszczenia wyświetlacza
 function clear() {
   document.querySelector("#display").value = "";
+  text = "";
   operatorInserted = true;
   numberInserted = false;
   minusCounter = 0;
-  dotCounter = 2;
+  dotCounter = 1;
+  onLeftSide = true;
+  textLeft = "";
+  textRight = "";
+  numbersBlocked = false; 
 }
 
 // Funkcja do zapisania procentów w ułamku dziesiętnym
@@ -95,7 +122,7 @@ function percent() {
 
 // Funkcja do wykonania odwrotności liczby wyświetlanej
 function inverse() {
-  if (numberInserted == true) {
+  if (numberInserted == true && text.includes('+')  == false && text.includes('-')  == false && text.includes('*')  == false && text.includes('/')  == false) {
     let number = document.querySelector("#display").value;
     result = -~~number;
     document.querySelector("#display").value = result;
@@ -104,10 +131,10 @@ function inverse() {
 
 // Funkcja do obliczenia wyniku na podstawie wyrażenia w wyświetlaczu
 function calculate() {
-  let text = document.querySelector("#display").value;
+  text = document.querySelector("#display").value;
   let left, right;
   let result = 0;
-  let z = "1";
+  numbersBlocked = true;
 
   // Iterowanie przez tekst, aby znaleźć operator i na jego podstawie wykonać obliczenia
   for (let i = 1; i < text.length; i++) {
@@ -125,6 +152,7 @@ function calculate() {
 
       operatorInserted = false;
       document.querySelector("#display").value = result;
+      text = document.querySelector("#display").value;
     } else if (text.charAt(i) == "-") {
       left = text.slice(0, i);
       right = text.slice(i + 1, text.length);
@@ -139,6 +167,7 @@ function calculate() {
 
       operatorInserted = false;
       document.querySelector("#display").value = result;
+      text = document.querySelector("#display").value;
     } else if (text.charAt(i) == "*") {
       left = text.slice(0, i);
       right = text.slice(i + 1, text.length);
@@ -153,6 +182,7 @@ function calculate() {
 
       operatorInserted = false;
       document.querySelector("#display").value = result;
+      text = document.querySelector("#display").value;
     } else if (text.charAt(i) == "/") {
       left = text.slice(0, i);
       right = text.slice(i + 1, text.length);
@@ -167,6 +197,7 @@ function calculate() {
 
       operatorInserted = false;
       document.querySelector("#display").value = result;
+      text = document.querySelector("#display").value;
     }
   }
 }
@@ -245,4 +276,3 @@ function countUp(operator, left, right, text) {
   result = Math.round(result * 1000) / 1000;
   return result;
 }
-  
