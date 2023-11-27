@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital clock</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div id="page">
+        <nav>
+            <ul>
+                <li><a href="index.html"><button>CLOCK</button></a></li>
+                <li><a href="timer.html"><button>TIMER</button></a></li>
+            </ul>
+        </nav>
+        <div id="title">STOPWATCH</div>
+        <div id="stopwatch">
+            <div id="display">
+                <div id="minute">
+                    <input readonly id="m" value="00"></input>
+                  
+                    
+                </div>
+                <span>:</span>
+                <div id="second">
+                    <input readonly id="s" value="00"></input>
+                    
+                    
+                </div>
+                <span>,</span>
+                <div id="hundredth">
+                    <input readonly id="h" value="00"></input>
+                    
+                </div>
+            </div>
+            <div id="operations">
+                <button id="reset">STOP</button>
+                <button id="starter">START</button>
+            </div>
+        </div>
+        </div>   
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="/assets/js/stopwatch.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital clock</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div id="page">
+        <nav>
+            <ul>
+                <li><a href="stopwatch.html"><button>STOPWATCH</button></a></li>
+                <li><a href="index.html"><button>CLOCK</button></a></li>
+            </ul>
+        </nav>
+        <div id="title">TIMER</div>
+        <div id="timer">
+        <div id="display-timer">
+            <div class="tile">
+                <div class="add-buttons">
+                    <button name="h1" class="add">+</button>
+                    <button name="h2" class="add">+</button>
+                </div>
+                <div class="two-numbers">
+                <input readonly id="h1" value="0"></input>
+                <input readonly id="h2" value="0"></input>
+                </div>
+                <div class="substract-buttons">
+                    <button name="h1" class="substract">-</button>
+                    <button name="h2" class="substract">-</button>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="add-buttons">
+                    <button name="m1" class="add">+</button>
+                    <button name="m2" class="add">+</button>
+                </div>
+                <div class="two-numbers">
+                    <input readonly id="m1" value="0"></input>
+                    <input readonly id="m2" value="0"></input>
+                    
+                    </div>
+                    <div class="substract-buttons">
+                        <button name="m1" class="substract">-</button>
+                        <button name="m2" class="substract">-</button>
+                    </div>
+            </div>
+            <div class="tile">
+                <div class="add-buttons">
+                    <button name="s1" class="add">+</button>
+                    <button name="s2" class="add">+</button>
+                </div>
+                <div class="two-numbers">
+                    <input readonly id="s1" value="0"></input>
+                    <input readonly id="s2" value="0"></input>
+                    
+                    </div>
+                <div class="substract-buttons">
+                    <button name="s1" class="substract">-</button>
+                    <button name="s2" class="substract">-</button>
+                </div>
+            </div>
+        </div>
+        <div id="operations">
+            <button id="stop">STOP</button>
+            <button id="resume">START</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="/assets/js/timer.js"></script>
+</body>
+</html>

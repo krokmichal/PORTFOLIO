@@ -7,6 +7,27 @@ body {
     color: white;
 }
 
+nav {
+    width: 100%;
+    padding: 10px 40px 10px 0px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    width: 150px;
+    font-size: 1.2rem;
+}
+
+
 #page {
     width: 100%;
     height: 100%;
@@ -17,7 +38,8 @@ body {
 }
 
 #title {
-    font-size: 4rem;
+    text-align: center;
+    font-size: 3rem;
     margin-bottom: 5%;
 }
 
@@ -35,7 +57,7 @@ body {
 
 #regions {
     width: 100%;
-    margin-top: 15%;
+    margin-top: 5%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -63,4 +85,102 @@ body {
 #switch {
     cursor: pointer;
     color: blue;
+}
+
+
+
+
+/* TIMER */
+
+#timer {
+    font-size: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#display-timer {
+    font-size: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#timer button {
+    width: 100px;
+    font-size: 1.3rem;
+}
+
+
+.two-numbers, .add-buttons, .substract-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    width: 93px;
+    height: 50px;
+    font-size: 2rem;
+    margin: 0px;
+    text-align: center;
+}
+
+
+
+/* STOPWATCH */
+
+#stopwatch {
+    font-size: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#display {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#display span {
+    font-size: 2rem;
+}
+
+#minute, #second, #hundredth {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+@media only screen and (max-width: 767px) {
+    #clock {
+        font-size: 2rem;
+    }
+
+    #display-timer
+    {
+        flex-direction: column;
+    }
+
+    .tile {
+        margin-bottom: 15px;
+    }
 }
