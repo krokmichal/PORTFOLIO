@@ -1,0 +1,110 @@
+:root {
+  /* ### Primary */
+
+  --orange: hsl(25, 97%, 53%);
+
+  /* ### Neutral */
+
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --dark-blue-bg: hsl(213, 20%, 27%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+body {
+  color: white;
+  font-family: Overpass;
+  font-weight: 400;
+}
+
+.container-fluid {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--very-dark-blue);
+  display: flex;
+  align-items: center;
+}
+
+.component {
+  background-color: var(--dark-blue);
+  height: 48vh;
+  border-radius: 40px;
+  color: var(--light-grey);
+}
+
+.component .row {
+  margin: 10px 20px;
+}
+
+.circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: var(--dark-blue-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle:hover {
+  background-color: var(--orange);
+  color: white;
+  cursor: pointer;
+}
+
+#star {
+  margin-top: 20px;
+}
+
+#star:hover {
+  background-color: var(--dark-blue-bg);
+  cursor: auto;
+}
+
+#title,
+#thank {
+  color: white;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-top: 20px;
+}
+
+.thank-you {
+  text-align: center;
+}
+
+#selection {
+  background-color: var(--dark-blue-bg);
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 30px;
+  color: var(--orange);
+}
+
+#t-img {
+  margin-top: 40px;
+}
+
+.btn {
+  margin-top: 30px;
+  padding: 10px;
+  color: white;
+  background-color: var(--orange);
+  border-radius: 30px;
+}
+
+.btn:hover {
+  color: var(--orange);
+  background-color: white;
+}
+
+#points {
+  margin-top: 40px;
+}
+
+.clicked {
+  background-color: var(--light-grey);
+  color: white;
+}
