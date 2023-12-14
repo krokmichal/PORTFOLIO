@@ -108,3 +108,73 @@ body {
   background-color: var(--light-grey);
   color: white;
 }
+
+@media screen and (max-width: 575px) {
+  #mainrow,
+  #thank-you-mainrow,
+  #imgrow,
+  #t-img,
+  #selrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #t-img {
+    margin: 0;
+    margin-top: 30px;
+  }
+
+  .component {
+    width: 90%;
+  }
+
+  #points {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rate {
+    margin: 0px;
+  }
+
+  #selection {
+    margin: 0;
+    margin-top: 30px;
+    width: 15em;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  #text {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .circle {
+    height: 40px;
+    width: 40px;
+  }
+
+  #star {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .circle {
+    height: 35px;
+    width: 35px;
+  }
+
+  #star {
+    height: 40px;
+    width: 40px;
+  }
+
+  .component .row {
+    margin: 15px 0;
+  }
+}
