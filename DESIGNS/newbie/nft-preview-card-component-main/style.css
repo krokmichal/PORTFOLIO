@@ -1,0 +1,83 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  --very-dark-blue-card: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: Outfit;
+  font-weight: 300;
+  color: var(--soft-blue);
+}
+
+.container-fluid {
+  height: 100vh;
+  background-color: var(--very-dark-blue-main);
+  display: flex;
+  align-items: center;
+}
+
+.component {
+  background-color: var(--very-dark-blue-card);
+  height: 55vh;
+  border-radius: 40px;
+}
+
+.row {
+  margin: 15px 0px;
+}
+
+.image {
+  margin-top: 5px;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.title {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.balance .col-6 {
+  display: flex;
+  align-items: center;
+}
+
+#eth {
+  margin-left: 5px;
+  color: var(--cyan);
+}
+
+#time-left {
+  margin-left: 5px;
+}
+
+.line {
+  border-top: 1px solid var(--soft-blue);
+  padding-top: 10px;
+  margin-top: 40px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.creation img {
+  width: 15%;
+  border: 1px white solid;
+  border-radius: 50%;
+}
+
+.creation #creation-desc {
+  margin-left: 20px;
+}
+
+.creation #name {
+  color: white;
+}
