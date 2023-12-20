@@ -1,0 +1,67 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  --very-dark-blue-card: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: Outfit;
+  font-weight: 400;
+  color: white;
+}
+
+/* .navbar {
+  position: sticky;
+} */
+
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: var(--very-dark-blue-main);
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  /* background-color: var(--very-dark-blue-card); */
+  height: 50vh;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.row {
+  margin: 10px;
+  padding: 10px;
+}
+
+.title,
+.photo {
+  /* border: white 1px solid; */
+}
+
+.pin {
+  margin-left: 5px;
+}
+
+.skills {
+  margin-top: 70px;
+  text-align: center;
+}
+
+.skills-title {
+  margin-bottom: 30px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
