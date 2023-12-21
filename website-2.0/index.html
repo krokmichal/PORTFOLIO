@@ -30,9 +30,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">krokmichal</a>
+        <a class="navbar-brand" href="#" onclick="location.reload()"
+          >krokmichal</a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -50,7 +52,7 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -64,11 +66,23 @@
                 Projects
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://krokmichal.github.io/hangman/"
+                    >Hangman</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://krokmichal.github.io/calculator/"
+                    >Calculator</a
+                  >
+                </li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a class="dropdown-item" href="#projects">More...</a>
                 </li>
               </ul>
             </li>
@@ -79,20 +93,20 @@
         </div>
       </div>
     </nav>
-    <div class="container-fluid main">
-      <div class="container">
+    <div class="container-fluid" id="main">
+      <div class="container main-container">
         <div class="row main-row">
-          <div class="col-5 offset-1 title">
-            <div class="row">
+          <div class="col-sm-6 col-xl-5 offset-xl-1 title">
+            <div class="row front">
               <div class="col-12">
-                <h1>Front End Developer</h1>
+                <h1>Front-End Developer</h1>
               </div>
             </div>
             <div class="row">
               <div class="col-12">
                 <p>
-                  Hi, I'm Michał Krok. I'm begginer front end developer based in
-                  Rzeszów, Poland.
+                  Hi, my name is Michał Krok. I'm beginner front end developer
+                  based in Rzeszów, Poland.
                   <span class="pin">
                     <i class="fa-solid fa-map-pin" style="color: #00fff7"></i
                   ></span>
@@ -114,17 +128,19 @@
               </div>
             </div>
           </div>
-          <div class="col-5 photo">
+          <div class="col-sm-6 col-xl-5 photo">
             <div class="row">
               <div class="col-12">
-                tutaj będzie moje piękne zdjęcie (uśmiechnięte)
+                <img src="images/me2.PNG" alt="" class="me" />
               </div>
             </div>
           </div>
         </div>
         <div class="row skills">
           <div class="col-10 offset-1 skills-title">SKILLS</div>
-          <div class="col-1 offset-2">
+        </div>
+        <div class="row skillset">
+          <div class="col-1 offset-md-2">
             <i class="fa-brands fa-html5 fa-2x" style="color: #fa6400"></i>
           </div>
           <div class="col-1">
@@ -151,5 +167,186 @@
         </div>
       </div>
     </div>
+    <div class="container-fluid" id="about">
+      <div class="container about-container">
+        <div class="row about-main-row">
+          <div class="col-11 col-lg-6 col-xxl-5 offset-xxl-1 about-photo">
+            <img src="/images/home-office.jpg" alt="" class="home-office" />
+          </div>
+          <div class="col-12 col-lg-6 col-xxl-5">
+            <div class="row about-row">
+              <div class="col-6 about-title">ABOUT ME</div>
+
+              <div class="col-12 about-title-extension">
+                <h2>
+                  Beginner front end developer based in Rzeszów, Poland.<span
+                    class="pin"
+                  >
+                    <i class="fa-solid fa-map-pin" style="color: #00fff7"></i
+                  ></span>
+                </h2>
+              </div>
+              <div class="col-12 about-text">
+                As a beginner front-end developer, I constantly enlarge my skill
+                resources. At the moment I am focused on learning React and
+                Sass. While doing this, I am actively searching for a company
+                where i could participate in an internship and spread my wings
+                there. In the future, I would like my skills to expand not only
+                to other technologies but also to other fields of IT.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid" id="projects">
+      <div class="container projects-container">
+        <div class="row projects-first-row">
+          <div class="col-6 offset-1 projects-title">PORTFOLIO</div>
+          <div class="col-12 offset-1">
+            <h2>
+              List of my current projects, that will be updated any moment!
+            </h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-5 offset-1 project-photo">
+            <a href="https://krokmichal.github.io/hangman/"
+              ><img src="/images/hangman.PNG" alt=""
+            /></a>
+          </div>
+          <div class="col-5 project-info">
+            <div class="row">
+              <div class="col-12 project-title">HANGMAN</div>
+              <div class="col-12 project-description">
+                A popular logic game where you have to guess someone's password
+                letter by letter. If you make ten mistakes then you are out of
+                the game!
+              </div>
+              <div class="col-4 offset-2 technologies">CSS</div>
+              <div class="col-4 technologies">JS</div>
+              <div class="col-12 project-links">
+                Code
+                <a
+                  href="https://github.com/krokmichal/PORTFOLIO/tree/main/hangman/assets"
+                  ><i
+                    class="fa-brands fa-github fa-2x"
+                    style="margin-right: 10px"
+                  ></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-5 offset-1 project-info">
+            <div class="row">
+              <div class="col-12 project-title">TODO</div>
+              <div class="col-12 project-description">
+                Simple to-do web application where you can add your daily tasks
+                for better organisation.
+              </div>
+              <div class="col-4 offset-2 technologies">CSS</div>
+              <div class="col-4 technologies">JS</div>
+              <div class="col-12 project-links">
+                Code
+                <a
+                  href="https://github.com/krokmichal/PORTFOLIO/tree/main/todo/assets"
+                  ><i
+                    class="fa-brands fa-github fa-2x"
+                    style="margin-right: 10px"
+                  ></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-5 project-photo">
+            <img src="/images/todo.PNG" alt="" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-5 offset-1 project-photo">
+            <img src="/images/calculator.PNG" alt="" />
+          </div>
+          <div class="col-5 project-info">
+            <div class="row">
+              <div class="col-12 project-title">CALCULATOR</div>
+              <div class="col-12 project-description">
+                Casual calculator that does everything what non-scientific
+                calculators do.
+              </div>
+              <div class="col-4 offset-2 technologies">CSS</div>
+              <div class="col-4 technologies">JS</div>
+              <div class="col-12 project-links">
+                Code
+                <a
+                  href="https://github.com/krokmichal/PORTFOLIO/tree/main/calculator/assets"
+                  ><i
+                    class="fa-brands fa-github fa-2x"
+                    style="margin-right: 10px"
+                  ></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-5 offset-1 project-info">
+            <div class="row">
+              <div class="col-12 project-title">MOVIE BROWSER</div>
+              <div class="col-12 project-description">
+                Just a simple movie broweser where you can look for your
+                favorites movies.
+              </div>
+              <div class="col-3 offset-2 technologies">CSS</div>
+              <div class="col-3 technologies">JS</div>
+              <div class="col-3 technologies">API</div>
+              <div class="col-12 project-links">
+                Code
+                <a
+                  href="https://github.com/krokmichal/PORTFOLIO/tree/main/movie-browser/assets"
+                  ><i
+                    class="fa-brands fa-github fa-2x"
+                    style="margin-right: 10px"
+                  ></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-5 project-photo">
+            <img src="/images/movie-browser.PNG" alt="" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-5 offset-1 project-photo">
+            <img src="/images/digital-clock.PNG" alt="" />
+          </div>
+          <div class="col-5 project-info">
+            <div class="row">
+              <div class="col-12 project-title">DIGITAL CLOCK</div>
+              <div class="col-12 project-description">
+                Digital clock, timer ad stopwatch. You can check local time for
+                London, Warsaw and Moscow, and you can set timer for your
+                boiling eggs.
+              </div>
+              <div class="col-4 offset-2 technologies">CSS</div>
+              <div class="col-4 technologies">JS</div>
+              <div class="col-12 project-links">
+                Code
+                <a
+                  href="https://github.com/krokmichal/PORTFOLIO/tree/main/digital-clock/assets"
+                  ><i
+                    class="fa-brands fa-github fa-2x"
+                    style="margin-right: 10px"
+                  ></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
