@@ -2,6 +2,7 @@
   --orange: hsl(8, 96%, 56%);
   --description: hsl(245, 5%, 46%);
   --graybg: hsl(0, 0%, 91%);
+  --banner: hsl(0, 0%, 18%);
 }
 
 body {
@@ -258,4 +259,70 @@ a {
   width: 50%;
   text-align: center;
   font-weight: 500;
+}
+
+.banner-section {
+  position: relative;
+  margin-bottom: 10em;
+
+  .container-fluid {
+    background-color: var(--banner);
+    color: white;
+    padding: 4em;
+  }
+
+  .row {
+    text-align: center;
+  }
+  h1 {
+    font-size: 4rem;
+    font-family: 700;
+  }
+
+  h3 {
+    font-weight: 300;
+  }
+
+  span {
+    color: var(--orange);
+  }
+}
+
+.choose-section {
+  position: relative;
+  padding-bottom: 10em;
+}
+
+#find-details {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 0.6em 1em;
+}
+
+.choose-title h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.offers {
+  div {
+    padding: 0.2em;
+  }
+}
+
+.offers div {
+  display: flex;
+  align-items: center;
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+}
+
+.b-title {
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: left;
+  width: 100%;
 }
