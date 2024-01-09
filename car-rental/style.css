@@ -1,0 +1,261 @@
+:root {
+  --orange: hsl(8, 96%, 56%);
+  --description: hsl(245, 5%, 46%);
+  --graybg: hsl(0, 0%, 91%);
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  background-color: white;
+}
+
+nav {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.nav1 {
+  justify-content: space-between;
+}
+.nav2 {
+  justify-content: space-around;
+}
+
+a {
+  width: auto;
+}
+
+.button {
+  background-color: var(--orange);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.button:hover {
+  box-shadow: 0 0 20px 0 var(--orange);
+  transition: 0.3s;
+}
+
+.d-flex .nav-item {
+  margin-right: 1em;
+}
+
+.hero-section {
+  height: 97vh;
+}
+
+#bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+#hero-img {
+  margin-top: 12em;
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.plan {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.save {
+  font-weight: 700;
+  font-size: 3.8rem;
+  line-height: 1.2em;
+}
+
+.save span {
+  color: var(--orange);
+}
+
+.description {
+  color: var(--description);
+  font-size: 1.2rem;
+}
+
+.hero-buttons button {
+  font-size: 1.2rem;
+  padding: 20px 35px;
+}
+
+#learn-more {
+  background-color: black;
+}
+
+#learn-more:hover {
+  box-shadow: 0 0 20px 0 black;
+}
+
+.booking-section {
+  position: relative;
+
+  .container {
+    background-color: white;
+    box-shadow: 0 0 50px 0 lightgray;
+    padding: 3em 5em;
+  }
+
+  input,
+  select {
+    padding: 10px;
+    color: var(--description);
+    margin-top: 1em;
+  }
+  label,
+  button {
+    margin-top: 2em;
+  }
+  button {
+    width: 100%;
+    margin-top: 3.9em;
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+  label {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  i {
+    margin-right: 0.5em;
+  }
+  h2 {
+    font-weight: 700;
+  }
+}
+
+.book-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-section {
+  position: relative;
+  padding: 10em 0;
+
+  .container .row .col-12 {
+    text-align: center;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 3rem;
+  }
+}
+
+.plan-el {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 5em;
+
+  label {
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+
+  p {
+    text-align: center;
+    color: var(--description);
+    margin-top: 1em;
+    font-size: 1.2rem;
+  }
+}
+
+.pick-section {
+  position: relative;
+  padding-bottom: 10em;
+
+  h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+  }
+  h3,
+  p {
+    text-align: center;
+  }
+
+  p {
+    color: var(--description);
+    font-size: 1.2rem;
+  }
+}
+
+.pick-main {
+  padding: 5em 0;
+}
+
+.pick-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pick-car {
+  padding: 0.6em 0.7em;
+  background-color: var(--graybg);
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 0.3em;
+}
+
+.first-pick {
+  background-color: var(--orange);
+  color: white;
+}
+
+.pick-car:hover {
+  cursor: pointer;
+  background-color: var(--orange);
+  color: white;
+  transition: 0.3s;
+}
+
+.info {
+  button {
+    width: 100%;
+    border-radius: 0;
+    padding: 1em;
+  }
+}
+
+.pick-price {
+  background-color: var(--orange);
+  color: white;
+  padding: 0.5em;
+  text-align: center;
+  font-size: 1.5rem;
+  span {
+    font-weight: 700;
+  }
+}
+
+.info-box {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid var(--description);
+  padding: 0.6em;
+}
+
+.attribute {
+  border-right: 80%;
+  border-right: 1px solid var(--description);
+}
+
+.attribute,
+.value {
+  width: 50%;
+  text-align: center;
+  font-weight: 500;
+}
