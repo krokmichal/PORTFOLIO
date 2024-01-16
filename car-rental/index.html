@@ -95,18 +95,21 @@
               </div>
             </div>
             <div class="row mt-5 hero-buttons">
-              <div class="col-4"><button class="button">Book Ride</button></div>
               <div class="col-5">
-                <button id="learn-more" class="button">Learn More</button>
+                <button class="button">
+                  Book Ride<i class="fa-regular fa-circle-check"></i>
+                </button>
+              </div>
+              <div class="col-5">
+                <button id="learn-more" class="button">
+                  Learn More<i class="fa-solid fa-angle-right"></i>
+                </button>
               </div>
             </div>
           </div>
           <div class="col-7">
-            <img id="hero-img" src="images/home.png" alt="" /><img
-              id="bg"
-              src="images/home2.png"
-              alt=""
-            />
+            <img id="hero-img" src="images/home.png" alt="" />
+            <img id="bg" src="images/home2.png" alt="" />
           </div>
         </div>
       </div>
@@ -403,19 +406,168 @@
         </div>
         <div class="row">
           <div class="col-8 offset-2 faq-questions">
-            <div class="col-12 faq1">
-              1. What is special about comparing rental car deals?
-            </div>
-            <div class="col-12 faq2">
-              2. How do I find the car rental deals?
-            </div>
-            <div class="col-12 faq3">
-              3. How do I find such low rental car prices?
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    1. What is special about comparing rental car deals?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Comparing rental car deals is important as it helps find the
+                    best deal that fits your budget and requirements, ensuring
+                    you get the most value for your money. By comparing various
+                    options, you can find deals that offer lower prices,
+                    additional services, or better car models. You can find car
+                    rental deals by researching online and comparing prices from
+                    different rental companies.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    2. How do I find the car rental deals?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    You can find car rental deals by researching online and
+                    comparing prices from different rental companies. Websites
+                    such as Expedia, Kayak, and Travelocity allow you to compare
+                    prices and view available rental options. It is also
+                    recommended to sign up for email newsletters and follow
+                    rental car companies on social media to be informed of any
+                    special deals or promotions.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    3. How do I find such low rental car prices?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Book in advance: Booking your rental car ahead of time can
+                    often result in lower prices. Compare prices from multiple
+                    companies: Use websites like Kayak, Expedia, or Travelocity
+                    to compare prices from multiple rental car companies. Look
+                    for discount codes and coupons: Search for discount codes
+                    and coupons that you can use to lower the rental price.
+                    Renting from an off-airport location can sometimes result in
+                    lower prices
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <section class="download-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 download">
+            <div class="row">
+              <div class="col-6">
+                <h1>Download our app to get most out of it</h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 mt-4 mb-4">
+                <p class="description">
+                  Thrown shy denote ten ladies though ask saw. Or by to he going
+                  think order event music. Incommode so intention defective at
+                  convinced. Led income months itself and houses you.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <img id="google-play" src="/images/google-play.svg" alt="" />
+                <img src="/images/app-store.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-3 car-rental">
+            <h2>CAR <span>Rental</span></h2>
+            <p class="description">
+              We offers a big range of vehicles for all your driving needs. We
+              have the perfect car to meet your needs.
+            </p>
+            <div><i class="fa-solid fa-phone-volume"></i>(123)-456-789</div>
+            <div><i class="fa-regular fa-envelope"></i>carrental@gmail.com</div>
+            <a id="xspeed" href="https://xpeedstudio.com/"
+              >Design by XpeedStudio</a
+            >
+          </div>
+          <div class="col-3">
+            <h2>COMPANY</h2>
+            <div class="company">
+              <a href="#">New York</a>
+              <a href="#">Careers</a>
+              <a href="#">Mobile</a>
+              <a href="#">Blog</a>
+              <a href="#">How we work</a>
+            </div>
+          </div>
+          <div class="col-3">
+            <h2>WORKING HOURS</h2>
+            <p>Mon - Fri: 9:00AM - 9:00PM</p>
+            <p>Sat: 9:00AM - 9:00PM</p>
+            <p>Sun: Closed</p>
+          </div>
+          <div class="col-3">
+            <h2>SUBSCRITPION</h2>
+            <p>Subscribe your Email address for latest news & updates.</p>
+            <input placeholder="Enter Email Address" type="text" />
+            <button class="button">Submit</button>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
   </body>
 </html>
