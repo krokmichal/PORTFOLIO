@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>first-vue</title>
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <ul v-if="booksDisplayed">
+        <li
+          @click="book.isFav = !book.isFav"
+          v-for="book in books"
+          :class="{ fav: book.isFav}"
+        >
+          {{book.author}} <span>{{book.title}}</span>
+          <img :src="book.img" alt="" />
+        </li>
+      </ul>
+      <button @click="toggleBooks()">
+        <span v-if="booksDisplayed">Hide Books</span>
+        <span v-else>Show Books</span>
+      </button>
+      <h1>Your favourites books:</h1>
+      <ul class="favourites">
+        <li class="favourite" v-for="book in filteredBooks">{{book.title}}</li>
+      </ul>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

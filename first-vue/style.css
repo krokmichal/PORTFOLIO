@@ -1,0 +1,49 @@
+span {
+  font-weight: 700;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 5em;
+  font-size: 2rem;
+  list-style: none;
+  padding: 0.5em;
+  background-color: lightgray;
+  margin: 1em;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+img {
+  max-width: 3em;
+}
+
+button {
+  font-size: 2rem;
+  padding: 1em;
+  cursor: pointer;
+  display: flex;
+}
+
+.fav {
+  background-color: pink;
+}
+
+.favourites {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.favourite {
+  width: 30%;
+  text-align: center;
+  box-shadow: 0 0 20px 0 gray;
+}
